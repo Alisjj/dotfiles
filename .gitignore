@@ -1,0 +1,24 @@
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.vim/
+.netrwhist
+
+# Lazy lock files (personal to each machine)
+*.lock
+lazy-lock.json
+
+# Stow state files
+.stow-local-ignore
+
+
