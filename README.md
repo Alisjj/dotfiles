@@ -44,7 +44,7 @@ sudo yum install stow
 
 ```bash
 # Clone this repository
-git clone https://github.com/YOUR_USERNAME/dotfiles.git ~/dotfiles
+git clone https://github.com/Alisjj/dotfiles.git ~/dotfiles
 
 # Run the bootstrap script
 cd ~/dotfiles
@@ -87,6 +87,20 @@ git add .
 git commit -m "Update config"
 git push
 ```
+
+## Tmux Keybindings
+
+| Binding | Action |
+|---|---|
+| `C-a` | Prefix (unbound from `C-b`) |
+| `C-a h/j/k/l` | Select pane left/down/up/right (repeatable) |
+| `C-a ^` | Jump to last window |
+| `C-a f` | Fuzzy session switcher (requires `tmux-sessionizer`) |
+| `C-a r` | Reload tmux config |
+| `C-a c` | New window |
+| `C-a n/p` | Next/previous window |
+| `C-a ,` | Rename window |
+| `C-a %` / `C-a "` | Split pane horizontally/vertically |
 
 ## Notes
 
