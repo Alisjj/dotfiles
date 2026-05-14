@@ -2,11 +2,10 @@
 
 set -e
 
-DOTFILES_DIR="$HOME/dotfiles"
+DOTFILES_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 echo "==> Installing dotfiles..."
 
-# Check if stow is installed
 if ! command -v stow &> /dev/null; then
     echo "==> GNU Stow not found. Installing..."
     if command -v brew &> /dev/null; then
@@ -21,18 +20,10 @@ if ! command -v stow &> /dev/null; then
     fi
 fi
 
-# Clone dotfiles repo if it doesn't exist
-if [ ! -d "$DOTFILES_DIR" ]; then
-    echo "==> Cloning dotfiles repository..."
-    git clone https://github.com/Alisjj/dotfiles.git "$DOTFILES_DIR"
-fi
-
-# Remove existing config files/directories to avoid conflicts
-echo "==> Removing existing config files..."
+echo "==> Removing existing config files to avoid conflicts..."
 rm -rf "$HOME/.config/nvim"
 rm -f "$HOME/.tmux.conf"
 
-# Use stow to create symlinks
 echo "==> Creating symlinks with Stow..."
 cd "$DOTFILES_DIR"
 stow -v -t ~ nvim tmux
