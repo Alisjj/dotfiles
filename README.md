@@ -94,15 +94,20 @@ git push
 |---|---|
 | `C-a` | Prefix (unbound from `C-b`) |
 | `C-a h/j/k/l` | Select pane left/down/up/right (repeatable) |
+| `C-a H/J/K/L` | Resize pane by 5 (repeatable) |
 | `C-a ^` | Jump to last window |
 | `C-a f` | Fuzzy session switcher (requires `tmux-sessionizer`) |
+| `C-a i` | Open cheat.sh in new window |
+| `C-a D` | Open TODO.md in new window |
 | `C-a r` | Reload tmux config |
 | `C-a c` | New window |
 | `C-a n/p` | Next/previous window |
 | `C-a ,` | Rename window |
+| `C-a \|` / `C-a -` | Split pane horizontally/vertically in pwd |
 | `C-a %` / `C-a "` | Split pane horizontally/vertically |
 
 ## Notes
 
 - `lazy-lock.json` is ignored in `.gitignore` as it's machine-specific
 - OS-specific files (`.DS_Store`, etc.) are also ignored
+- Yank in copy mode pipes to system clipboard via `pbcopy` (macOS)
