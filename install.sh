@@ -24,7 +24,7 @@ fi
 # Clone dotfiles repo if it doesn't exist
 if [ ! -d "$DOTFILES_DIR" ]; then
     echo "==> Cloning dotfiles repository..."
-    git clone https://github.com/YOUR_USERNAME/dotfiles.git "$DOTFILES_DIR"
+    git clone https://github.com/Alisjj/dotfiles.git "$DOTFILES_DIR"
 fi
 
 # Remove existing config files/directories to avoid conflicts
