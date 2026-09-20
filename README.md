@@ -13,6 +13,19 @@ dotfiles/
 │       └── nvim/          → ~/.config/nvim/
 ├── tmux/
 │   └── .tmux.conf         → ~/.tmux.conf
+├── zsh/
+│   └── .zshrc             → ~/.zshrc
+├── bash/
+│   ├── .bashrc            → ~/.bashrc
+│   └── .bash_profile      → ~/.bash_profile
+├── starship/
+│   └── .config/
+│       └── starship.toml  → ~/.config/starship.toml
+├── opencode/
+│   └── .config/
+│       └── opencode/
+│           ├── opencode.jsonc → ~/.config/opencode/opencode.jsonc
+│           └── tui.json       → ~/.config/opencode/tui.json
 ├── install.sh            # Bootstrap script for new machines
 └── README.md
 ```

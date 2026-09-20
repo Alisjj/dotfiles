@@ -23,10 +23,14 @@ fi
 echo "==> Removing existing config files to avoid conflicts..."
 rm -rf "$HOME/.config/nvim"
 rm -f "$HOME/.tmux.conf"
+rm -f "$HOME/.zshrc"
+rm -f "$HOME/.bashrc" "$HOME/.bash_profile"
+rm -f "$HOME/.config/starship.toml"
+rm -f "$HOME/.config/opencode/opencode.jsonc" "$HOME/.config/opencode/tui.json"
 
 echo "==> Creating symlinks with Stow..."
 cd "$DOTFILES_DIR"
-stow -v -t ~ nvim tmux
+stow -v -t ~ nvim tmux zsh bash starship opencode
 
 echo "==> Done! Dotfiles are now linked."
 echo ""
